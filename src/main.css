@@ -1,0 +1,251 @@
+/**
+ * @name 1337 Vannila Like Theme
+ * @author smartfridge#1337
+ * @version 1.0.0
+ * @invite uaW5vMY3V6
+ * @description Moves the server list from the left to the top of Discord. Compatible with Server Folders and most basic transparent themes
+ * @source https://github.com/smartfrigde/1337-Vanilla-Like-Theme
+ * @website https://github.com/smartfrigde/1337-Vanilla-Like-Theme
+*/
+
+@import url("https://discordstyles.github.io/HorizontalServerList/base.css");
+@import url("https://discordstyles.github.io/RadialStatus/base.css");
+@import "https://nyri4.github.io/Discolored/main.css";
+@import url('https://kckarnige.github.io/server-scroll/base.css');
+@import url('https://kckarnige.github.io/custom-server-logos/base.css');
+/* [Recommended] Revert CSS variables: colors, fonts */
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/variables.css');
+
+
+/* Individual components: */
+
+/* Revert mentions */
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/mentions.css');
+
+/* Revert reactions */
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/reactions.css');
+
+/* Revert profile pictures */
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/pfps.css');
+/* Revert some other minor things */
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/general/other.css');
+@import url('https://mr-miner1.github.io/Better-Badges/theme.css');
+:root {
+  --HSL-server-icon-size: 40px;  /* Size of the server icons | DEFAULT: 40px */
+  --HSL-server-spacing: 10px;  /* Spacing between each server icon | DEFAULT: 10px */
+  --rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+  --rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+  --rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+
+  --rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
+  --rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+  --rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+
+  --rs-avatar-shape: 50%; /* 50% for round - 0% for square */
+
+  --rs-online-color: #43b581; /* Colour for online status */
+  --rs-idle-color: #faa61a; /* Colour for idle status */
+  --rs-dnd-color: #f04747; /* Colour for dnd status */
+  --rs-offline-color: #636b75; /* Colour for offline status */
+  --rs-streaming-color: #643da7; /* Colour for streaming status */
+  --rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+  --rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
+
+  --rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+}
+.theme-dark {
+    --bg: transparent;
+    --bg-overlay: rgba(0, 0, 0, 0.7972451874704072);
+    --accent: #900;
+    --accent-bright: #f00;
+    --accent-back: rgba(255, 0, 0, 0.15);
+    --accent-back-bright: rgba(255, 0, 0, 0.4);
+    --icon-color: rgba(250, 166, 26, 0.5);
+    --link-color: #faa61a;
+    --link-color-hover: #fad61a;
+    --popup-background: #222;
+    --popup-highlight: #333;
+    --unread-color: var(--accent-bright);
+    --typing-height: 25px;
+    --gift-button: none;
+    --gif-picker: flex;
+}
+
+#private-channels-2 {
+    display: none;
+}
+#socialLinks-3jqNFy {
+    display: none !important; 
+}
+
+#header-2RyJ0Y.ed-settings:before {
+    display: none !important;
+}
+
+
+.wordmark-2iDDfm svg { visibility: hidden; }
+.wordmark-2iDDfm { background-image: none !important; }
+
+.expandedFolderBackground-2sPsd-:not(.collapsed-1GMuSb) + .listItem-2P_4kh > div[class=""] {
+    background: transparent;
+}
+
+.da-rolesList {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.theme-dark .circleIconButton-jET_ig {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    margin-left: 0px;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border:  none;
+    color:  #fff;
+    box-shadow: 0 0 19px #000;
+}
+
+#app-mount .containerDefault--pIXnN .wrapper-2jXpOf,
+#app-mount .channel-2QD9_O {
+    border-radius: var(--indicator-rounding);
+}
+#app-mount .containerDefault--pIXnN .wrapper-2jXpOf::before,
+#app-mount .channel-2QD9_O::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+#app-mount .content-1x5b-n,
+#app-mount .channel-2QD9_O .layout-2DM8Md {
+    background-color: transparent;
+}
+#app-mount .containerDefault--pIXnN .wrapper-2jXpOf:not(.modeSelected-346R90):not(.modeConnected-3IsKId):hover,
+#app-mount .channel-2QD9_O:not(.selected-aXhQR6):hover {
+    background: var(--indicator-hovered);
+}
+#app-mount .modeSelected-346R90,
+#app-mount .channel-2QD9_O.selected-aXhQR6 {
+    background-color: var(--indicator-selected-background);
+}
+#app-mount .modeSelected-346R90:hover,
+#app-mount .channel-2QD9_O.selected-aXhQR6:hover {
+    background-color: var(--indicator-selected-hover);
+}
+#app-mount .modeSelected-346R90::before,
+#app-mount .channel-2QD9_O.selected-aXhQR6::before {
+    border-left: var(--indicator-border-info) var(--indicator-selected-border);
+}
+#app-mount .modeUnread-1qO3K1 {
+    background: var(--indicator-unread-background);
+}
+#app-mount .modeUnread-1qO3K1::before {
+    border-left: var(--indicator-border-info) var(--indicator-unread-border);
+}
+#app-mount .modeUnread-1qO3K1 .unread-2lAfLh {
+    display: none;
+}
+#app-mount .modeConnected-3IsKId {
+    background-color: var(--indicator-connected-background);
+}
+#app-mount .modeConnected-3IsKId:hover {
+    background-color: var(--indicator-connected-hover);
+}
+#app-mount .modeConnected-3IsKId::before {
+    border-left: var(--indicator-border-info) var(--indicator-connected-border);
+}
+#app-mount .channel-2QD9_O {
+    margin-left: 0;
+    max-width: 100%;
+}
+#app-mount .channel-2QD9_O div .avatar-3uk_u9 {
+    margin-left: 8px;
+}
+.theme-dark {
+    --bg: transparent;
+    --bg-overlay: rgba(0, 0, 0, 0.7972451874704072);
+    --accent: #900;
+    --accent-bright: #f00;
+    --accent-back: rgba(255, 0, 0, 0.15);
+    --accent-back-bright: rgba(255, 0, 0, 0.4);
+    --icon-color: rgba(250, 166, 26, 0.5);
+    --link-color: #faa61a;
+    --link-color-hover: #fad61a;
+    --popup-background: #222;
+    --popup-highlight: #333;
+    --unread-color: var(--accent-bright);
+    --typing-height: 25px;
+    --gift-button: none;
+    --gif-picker: flex;
+}
+
+#private-channels-2 {
+    display: none;
+}
+#socialLinks-3jqNFy {
+    display: none !important; 
+}
+
+#header-2RyJ0Y.ed-settings:before {
+    display: none !important;
+}
+
+.info-1VyQPT::before {
+    content: "HackerCord";
+    height: auto;
+    line-height: 80%;
+    text-align: center;
+
+    background: linear-gradient(to bottom right,#0ff,#f0f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-size: 16pt;
+    font-weight: 500;
+    font-family: sans-serif;
+
+    text-transform: none;
+}
+
+.wordmark-2iDDfm svg { visibility: hidden; }
+.wordmark-2iDDfm { background-image: none !important; }
+
+.expandedFolderBackground-2sPsd-:not(.collapsed-1GMuSb) + .listItem-2P_4kh > div[class=""] {
+    background: transparent;
+}
+
+
+.theme-dark .circleIconButton-jET_ig {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    margin-left: 0px;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border:  none;
+    color:  #fff;
+    box-shadow: 0 0 19px #000;
+}
+
+.userPopout-3XzG_A .body-3iLsc4 {
+    max-height: 200px;
+    overflow-y: auto;
+}
+.theme-dark .circleIconButton-jET_ig {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    margin-left: 0px;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border:  none;
+    color:  #fff;
+    box-shadow: 0 0 19px #000;
+}
+
