@@ -1,0 +1,8 @@
+{
+    "name": "1337 Vanilla Theme",
+    "description": "helo this is my theme I use ",
+    "version": "1.0.0",
+    "author": "smartfridge",
+    "theme": "1337VanillaLikeTheme.theme.css",
+    "license": "MIT"
+}
